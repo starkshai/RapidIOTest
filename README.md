@@ -1,4 +1,4 @@
-﻿# TwoSRIO1 - 双路 SRIO 环回测试工程
+﻿# TwoSRIO1 - 双通道 SRIO 环回测试工程
 
 基于 Xilinx Kintex-7 FPGA 的两路 SRIO (Serial RapidIO) 通道互联测试工程，用于验证 SRIO 链路的收发通路是否畅通。
 
@@ -107,3 +107,4 @@ ttype = 1000  → 带数据响应，DONE（成功）
 ## 许可证
 
 本工程仅供学习与参考使用。
+

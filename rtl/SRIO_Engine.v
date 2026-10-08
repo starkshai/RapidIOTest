@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 
-//1.发�?�写数据报文
-//2.发�?�一个DB报文，�?�知对方写完�??
-//3.发�?�一个读报文，把写的数据读出�??
-//4.发�?�一个MESSAGE，�?�知对方操作结束
-//5.回读0~256的响应报�??
+// 1. 发送写数据报文，例如 NWRITE / SWRITE
+// 2. 发送一个 Doorbell 报文，告知对方写完了
+// 3. 发送一个读报文，例如 NREAD，把写的数据读出来
+// 4. 发送一个 MESSAGE 报文，告知对方操作结束
+// 5. 回读 0~256 的响应报文
 module SRIO_Engine(
     input               i_clk                   ,
     input               i_rst                   ,
@@ -262,7 +262,7 @@ begin
     else 
         r_read_triger <= 'd0;
 end
-/*----带数据的响应报文----*/
+/*----å¸¦æ•°æ®çš„å“åº”æŠ¥æ–‡----*/
 always@(posedge i_clk,posedge i_rst)
 begin
     if(i_rst)
